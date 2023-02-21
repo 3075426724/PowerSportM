@@ -1,0 +1,11 @@
+<view>
+  <view class="top_tip">可通过云函数免接口调用凭证，直接生成小程序码。</view>
+  <view class="box_text" wx:if="{{!codeSrc}}">小程序码将展示在这里</view>
+  <view  wx:if="{{codeSrc}}" class="code_box">
+    <image class="code_img" src="{{codeSrc}}"></image>
+  </view>
+  <view class="button" bindtap="getCodeSrc" wx:if="{{!haveGetCodeSrc}}">生成小程序码</view>
+  <view class="button_clear" bindtap="clearCodeSrc" wx:if="{{haveGetCodeSrc}}">清空</view>
+  <view class="tip">在”资源管理器>cloudfunctions>quickstartFunctions>getMiniProgramCode>index.js“找到获取小程序码函数，体验该能力</view>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+</view>

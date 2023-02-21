@@ -1,0 +1,73 @@
+.tip {
+  font-size: 23rpx;
+  color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  text-align: center;
+  margin: 30rpx auto 0 auto;
+}
+
+.top_tip {
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  text-align: left;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+
+.box_text {
+  background-color: white;
+  text-align: center;
+  padding: 300rpx 0;
+  margin-top: 30rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.code_box {
+  text-align: center;
+  background-color: white;
+  margin-top: 30rpx;
+  padding: 17rpx;
+}
+
+.code_box_title {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+  text-align: left;
+}
+
+.code_box_record {
+  display: flex;
+  justify-content: space-between;
+}
+
+.code_box_record_title {
+  width: 33%;
+  font-size: 26rpx;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 20rpx 0;
+}
+
+.code_box_record_detail {
+  width: 33%;
+  font-size: 26rpx;
+  padding: 20rpx 0;
+}
+
+.button {
+  width: 300rpx;
+  text-align: center;
+  margin: 250rpx auto 0 auto;
+  height: 80rpx;
+  color: #07c160;
+  border-radius: 5px;
+  line-height: 80rpx;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.line {
+  height: 1rpx;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}

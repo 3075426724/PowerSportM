@@ -1,0 +1,6 @@
+<view>
+  <icon class="icon-box-img icon" type="success" size="53"></icon>
+  <view class="title">地区销量统计更新成功</view>
+  <view class="info">可在“云开发控制台>数据库>记录列表”中进行查看</view>
+  <view class="button" bindtap="goBack">我知道了</view>
+</view>

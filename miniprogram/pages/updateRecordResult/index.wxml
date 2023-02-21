@@ -1,0 +1,21 @@
+<view>
+  <view class="top_tip">体验更新字段记录能力，更新数据表中的销量数据。</view>
+  <view class="box_text" wx:if="{{!record}}">数据将展示在这里</view>
+  <view  wx:if="{{record}}" class="code_box">
+    <view class="code_box_title">地区销量统计</view>
+    <view class="code_box_record">
+      <view class="code_box_record_title">地域</view>
+      <view class="code_box_record_title">城市</view>
+      <view class="code_box_record_title">销量</view>
+    </view>
+    <view class="line"></view>
+    <view class="code_box_record" wx:for="{{record}}" wx:key="_id">
+      <view class="code_box_record_detail">{{item.region}}</view>
+      <view class="code_box_record_detail">{{item.city}}</view>
+      <input class="code_box_record_detail" bindinput="bindInput" data-index="{{index}}" value="{{item.sales}}" type="number"></input>
+    </view>
+  </view>
+  <view class="button" bindtap="updateRecord">更新</view>
+  <view class="tip">在”资源管理器>cloudfunctions>quickstartFunctions>updateRecord>index.js“找到查询记录函数，体验该能力</view>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+</view>
