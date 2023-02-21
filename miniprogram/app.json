@@ -1,0 +1,120 @@
+{
+	"pages": [
+		"projects/companyhouse/pages/default/index/default_index",
+		"projects/companyhouse/pages/about/index/about_index",
+		"projects/companyhouse/pages/product/detail/product_detail",
+		"projects/companyhouse/pages/product/index/product_index",
+		"projects/companyhouse/pages/album/detail/album_detail",
+		"projects/companyhouse/pages/album/index/album_index",
+		"projects/companyhouse/pages/album/project/album_project",
+		"projects/companyhouse/pages/meet/index/meet_index",
+		"projects/companyhouse/pages/meet/calendar/meet_calendar",
+		"projects/companyhouse/pages/meet/join/meet_join",
+		"projects/companyhouse/pages/meet/detail/meet_detail",
+		"projects/companyhouse/pages/meet/self/meet_self",
+		"projects/companyhouse/pages/meet/my_join_list/meet_my_join_list",
+		"projects/companyhouse/pages/meet/my_join_detail/meet_my_join_detail",
+		"projects/companyhouse/pages/news/index/news_index",
+		"projects/companyhouse/pages/news/detail/news_detail",
+		"projects/companyhouse/pages/news/cate1/news_cate1",
+		"projects/companyhouse/pages/news/cate2/news_cate2",
+		"projects/companyhouse/pages/search/search",
+		"projects/companyhouse/pages/my/index/my_index",
+		"projects/companyhouse/pages/my/reg/my_reg",
+		"projects/companyhouse/pages/my/edit/my_edit",
+		"projects/companyhouse/pages/my/foot/my_foot",
+		"projects/companyhouse/pages/my/fav/my_fav",
+		"projects/companyhouse/pages/admin/index/home/admin_home",
+		"projects/companyhouse/pages/admin/index/login/admin_login",
+		"projects/companyhouse/pages/admin/content/admin_content",
+		"projects/companyhouse/pages/admin/meet/cover/admin_meet_cover",
+		"projects/companyhouse/pages/admin/meet/edit/admin_meet_edit",
+		"projects/companyhouse/pages/admin/meet/export/admin_join_export",
+		"projects/companyhouse/pages/admin/meet/join/admin_meet_join",
+		"projects/companyhouse/pages/admin/meet/list/admin_meet_list",
+		"projects/companyhouse/pages/admin/meet/record/admin_record_list",
+		"projects/companyhouse/pages/admin/meet/scan/admin_meet_scan",
+		"projects/companyhouse/pages/admin/meet/self/admin_meet_self",
+		"projects/companyhouse/pages/admin/meet/temp/admin_temp_select",
+		"projects/companyhouse/pages/admin/meet/time/admin_meet_time",
+		"projects/companyhouse/pages/admin/mgr/log/admin_log_list",
+		"projects/companyhouse/pages/admin/news/list/admin_news_list",
+		"projects/companyhouse/pages/admin/news/add/admin_news_add",
+		"projects/companyhouse/pages/admin/news/edit/admin_news_edit",
+		"projects/companyhouse/pages/admin/setup/about/admin_setup_about",
+		"projects/companyhouse/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/companyhouse/pages/admin/setup/qr/admin_setup_qr",
+		"projects/companyhouse/pages/admin/user/list/admin_user_list",
+		"projects/companyhouse/pages/admin/user/detail/admin_user_detail",
+		"projects/companyhouse/pages/admin/user/export/admin_user_export",
+		"projects/companyhouse/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/companyhouse/pages/admin/mgr/list/admin_mgr_list",
+		"projects/companyhouse/pages/admin/mgr/add/admin_mgr_add",
+		"projects/companyhouse/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/companyhouse/pages/admin/album/list/admin_album_list",
+		"projects/companyhouse/pages/admin/album/add/admin_album_add",
+		"projects/companyhouse/pages/admin/album/edit/admin_album_edit",
+		"projects/companyhouse/pages/admin/product/list/admin_product_list",
+		"projects/companyhouse/pages/admin/product/add/admin_product_add",
+		"projects/companyhouse/pages/admin/product/edit/admin_product_edit",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"navigationBarTitleText": "装修公司小程序",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#515151",
+		"list": [
+			{
+				"pagePath": "projects/companyhouse/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/companyhouse/images/tabbar/home.png",
+				"selectedIconPath": "/projects/companyhouse/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/companyhouse/pages/album/index/album_index",
+				"text": "设计师",
+				"iconPath": "/projects/companyhouse/images/tabbar/album.png",
+				"selectedIconPath": "/projects/companyhouse/images/tabbar/album_cur.png"
+			},
+			{
+				"pagePath": "projects/companyhouse/pages/product/index/product_index",
+				"text": "设计方案",
+				"iconPath": "/projects/companyhouse/images/tabbar/product.png",
+				"selectedIconPath": "/projects/companyhouse/images/tabbar/product_cur.png"
+			},
+			{
+				"pagePath": "projects/companyhouse/pages/meet/index/meet_index",
+				"text": "预约量房",
+				"iconPath": "/projects/companyhouse/images/tabbar/day.png",
+				"selectedIconPath": "/projects/companyhouse/images/tabbar/day_cur.png"
+			},
+			{
+				"pagePath": "projects/companyhouse/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/companyhouse/images/tabbar/my.png",
+				"selectedIconPath": "/projects/companyhouse/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

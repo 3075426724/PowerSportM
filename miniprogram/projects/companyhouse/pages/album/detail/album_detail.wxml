@@ -1,0 +1,39 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<block wx:if="{{isLoad}}">
+	<view class="bg shadow-project">
+		<view class="inner"></view>
+	</view>
+	<view class="main">
+		<view class="top shadow-project">
+			<view class="line1">
+				<image class="left loading" src="{{album.ALBUM_OBJ.cover[0]}}" mode="aspectFill" />
+				<view class="right">
+					<view class="name">{{album.ALBUM_TITLE}}</view>
+					<view class="desc">{{album.ALBUM_OBJ.duty}} | {{album.ALBUM_OBJ.skill}}年设计经验</view>
+				</view>
+			</view>
+			<view class="line2" wx:if="{{album.ALBUM_OBJ.desc}}"><text>{{album.ALBUM_OBJ.desc}}</text></view>
+
+			<view class="line3" wx:if="{{album.ALBUM_OBJ.lilian}}"><text>理念：{{album.ALBUM_OBJ.lilian}}</text></view>
+
+			<view class="line3" wx:if="{{album.ALBUM_OBJ.project}}"><text>项目：{{album.ALBUM_OBJ.project}}</text></view>
+		</view>
+
+		<view class="list">
+			<view class="line">典型案例</view>
+			<view bindtap="url" data-url="../project/album_project?idx={{index}}" class="item shadow-project" wx:for="{{album.project}}" wx:key="key">
+				<image lazy-load="{{true}}" src="{{item.cover}}" class="loading" mode="aspectFill" />
+				<view class="title">
+					<text>{{item.name}}</text>
+					<text class="more icon-right text-project"></text>
+				</view>
+			</view>
+
+		</view>
+
+	</view>
+
+	<cmpt-detail mode="mode1" topBtnShow="{{topBtnShow}}" oid="{{album._id}}" cate="{{album.ALBUM_CATE_NAME}}" title="{{album.ALBUM_TITLE}}" cover="{{album.ALBUM_OBJ.cover[0]}}" qr="{{album.ALBUM_QR}}" desc="查看详情" bg="{{skin.PROJECT_COLOR}}"></cmpt-detail>
+</block>

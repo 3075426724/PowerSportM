@@ -1,0 +1,122 @@
+@import "../../../style/skin.wxss";
+
+.list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.list .item {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 10rpx;
+	padding: 30rpx;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30rpx;
+	position: relative;
+}
+
+.list .item .line1 {
+	width: 100%;
+	display: flex;
+	margin-bottom: 20rpx;
+}
+
+.list .item .line1 .left {
+	width: 130rpx;
+	height: 130rpx;
+	border-radius: 50%;
+	margin-right: 30rpx;
+}
+
+
+.list .item .line1 .right {
+	display: flex;
+	flex-direction: column;
+	flex:1;
+}
+ 
+.list .item .line1 .right .name {
+	width: 100%;
+	font-size: 28rpx;
+	font-weight: bold; 
+	color: #000;
+	margin-bottom: 10rpx;
+}
+
+.list .item .line1 .right .duty {
+	width: 100%;
+	font-size: 26rpx;  
+	color: #333;
+	margin-bottom: 10rpx;
+}
+
+.list .item .line1 .right .style {
+	width: 100%;
+	font-size: 26rpx;  
+	color: #333;
+	margin-bottom: 10rpx;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+.list .item .line2 {
+	color: #777;
+}
+
+/*燕尾*/
+.rb {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0rpx;
+	right: 30rpx;
+	background-image: linear-gradient(45deg, #29CCCC, #c1f3f3);
+	color:#fff;
+}
+
+.rb.gold { 
+	background-image: linear-gradient(100deg, gold, rgb(245, 230, 149)); 
+}
+
+.rb.sliver { 
+	background-image: linear-gradient(100deg, #c0c0c0, #dfd7d7); 
+}
+
+.rb .top {
+	height: 70rpx;
+	display: flex;
+	font-size: 24rpx;
+	align-items: center;
+	justify-content: center; 
+	font-weight: bold; 
+}
+
+.rb .bottom {
+	display: flex;
+}
+
+.rb .bottom .box1 {
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	width: 0;
+	border-color: #fff #fff #fff transparent;
+	/*border-top-width设置为0,为了让透明的顶部的三角形不占据空间*/
+	border-style: solid;
+	border-width: 0rpx 0rpx 20rpx 40rpx;
+}
+
+.rb .bottom .box2 {
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	width: 0;
+	border-color: transparent #fff #fff #fff;
+	/*border-top-width设置为0,为了让透明的顶部的三角形不占据空间*/
+	border-style: solid;
+	border-width: 20rpx 0rpx 0rpx 40rpx;
+}
