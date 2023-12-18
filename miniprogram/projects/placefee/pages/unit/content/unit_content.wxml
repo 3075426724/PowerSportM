@@ -1,0 +1,32 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<block wx:if="{{isLoad}}">
+	<view class="main padding-project">
+		<view class="article-box margin-top-xs">
+			<!-- article content begin -->
+			<view class="article card-project shadow-project">
+				<view class="title"><text user-select="true">{{unit.UNIT_TITLE}}</text></view> 
+
+
+				<block wx:for="{{unit.UNIT_OBJ.content}}" wx:key="key">
+					<view class="content" wx:if="{{item.type=='text'}}">
+						<text user-select="{{true}}">{{item.val}}</text>
+					</view>
+
+					<view class="pics" wx:if="{{item.type=='img'}}">
+						<image bindtap="url" data-type='img' data-url="{{item.val}}" show-menu-by-longpress="{{true}}" class="loading" mode='widthFix' lazy-load="true" src="{{item.val}}">
+						</image>
+					</view>
+				</block>
+				<!-- article content end -->
+
+			</view>
+			<!-- article content end -->
+
+		</view>
+
+	</view> 
+
+	<cmpt-detail mode="mode1" topBtnShow="{{topBtnShow}}" oid="{{unit._id}}" cate="场馆" title="{{unit.UNIT_TITLE}}" cover="{{unit.UNIT_OBJ.cover[0]}}" qr="{{unit.UNIT_QR}}" desc="查看详情"  bg="#55BF9B"></cmpt-detail>
+</block>

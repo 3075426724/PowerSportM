@@ -1,0 +1,45 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+<block wx:if="{{isLoad}}">
+	<cmpt-comm-list sortMenusDefaultIndex="0" type="unit" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="unit/list" topBottom="120" placeholder="搜索" returnUrl='/pages/unit/index/unit_index' bind:list="myCommListListener">
+
+		<!-- List Begin -->
+		<view class="list">
+			<view bindtap="url" data-url="../detail/unit_detail?id={{item._id}}" class="item shadow-project" wx:for="{{dataList.list}}" wx:key="K">
+				<view class="star">{{item.UNIT_OBJ.star}}星</view>
+				<view class="left">
+					<image class="loading" lazy-load="{{true}}" mode="aspectFill" src="{{item.UNIT_OBJ.cover[0]}}" />
+				</view>
+				<view class="right">
+					<view class="line">
+						<view class="name content-cut-one">{{item.UNIT_TITLE}}</view>
+						<view class="tag-list">
+							<block wx:for="{{cateList}}" wx:key="kc" wx:for-item="itmc">
+								<text wx:if="{{itmc.val==itm}}" wx:for="{{item.UNIT_OBJ.cate}}" wx:key="k" wx:for-item="itm">{{itmc.label}}</text>
+							</block>
+						</view>
+					</view>
+
+
+					<view class="address content-cut-one"><text class="icon-location margin-right-xxs"></text>{{item.UNIT_ADDRESS_DETAIL}} </view>
+				</view>
+
+			</view>
+		</view>
+
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+		<!--load end-->
+
+	</cmpt-comm-list>
+
+
+</block>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'unit_index',returnHome:false}}" />
+</block>
