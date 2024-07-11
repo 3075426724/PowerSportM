@@ -1,8 +1,0 @@
-{
-	"usingComponents": {  
-	},
-	"enablePullDownRefresh": false,
-	"disableScroll": true, 
-	"navigationBarBackgroundColor": "#EE7532",
-	"navigationBarTitleText": "场馆"
-}

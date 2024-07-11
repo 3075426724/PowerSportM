@@ -1,7 +1,0 @@
-{
-	"usingComponents": {  
-	},
-	"enablePullDownRefresh": false,
-	"disableScroll": true, 
-	"navigationBarTitleText": "场地"
-}
