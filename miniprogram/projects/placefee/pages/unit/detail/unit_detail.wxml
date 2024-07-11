@@ -1,0 +1,63 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l"></view>
+<block wx:if="{{isLoad}}">
+	<view class="main">
+		<view class="pic">
+			<image class="loading" src="{{unit.UNIT_OBJ.cover}}" mode="widthFix" lazy-load="{{true}}" />
+			<view bindtap="url" data-url="../content/unit_content" class="intro">场馆介绍</view>
+		</view>
+
+		<view class="info">
+			<view class="header shadow-project">
+				<view class="line1">{{unit.UNIT_TITLE}}</view>
+			</view>
+
+			<view class="content shadow-project">
+				<view class="item">
+					<view class="title">营业时间</view>
+					<view class="desc"><text user-select>{{unit.UNIT_OBJ.time}}</text></view>
+				</view>
+				<view class="item" bind:tap="url" data-type="phone" data-url="{{unit.UNIT_OBJ.phone}}">
+					<view class="title">联系电话</view>
+					<view class="desc"><text user-select>{{unit.UNIT_OBJ.phone}}</text> <text class="icon-phone margin-left-xxs text-grey"></text></view>
+				</view> 
+				<view class="item" style="align-items: flex-start;" bindtap="bindMapTap" data-address="{{unit.UNIT_ADDRESS_DETAIL}}" data-location="{{unit.UNIT_ADDRESS}}">
+					<view class="title">场馆地点</view>
+					<view class="desc"><text class="icon-location text-red"></text>{{unit.UNIT_ADDRESS_DETAIL}}
+					</view>
+					<text class="icon-right"></text>
+				</view>
+				<view class="item" wx:if="{{unit.UNIT_OBJ.traffic}}">
+					<view class="title">交通指引</view>
+					<view class="desc"><text user-select>{{unit.UNIT_OBJ.traffic}}</text></view>
+				</view>
+
+			</view>
+
+			<view class="appt shadow-project">
+				<view class="form-line">
+					<view class="left"></view>
+					<text class="txt">场地预订</text>
+					<view class="right"></view>
+				</view>
+				<view class="cate-list">
+					<view bind:tap="url" data-url="../../enroll/all/enroll_all?unitId={{unit._id}}&cateId={{item.id}}" class="item" wx:for="{{unit.cateList}}" wx:key="key1">
+						<image src="../../../images/menu/{{item.id}}.png"></image>
+						<text>{{item.title}}</text>
+					</view>
+				</view>
+				<view wx:if="{{unit.cateList.length==0}}" class="text-center text-grey padding">暂无可预订场地</view>
+			</view>
+			<view style="height:200rpx"></view>
+		</view>
+
+	</view>
+	<view style="height:200rpx;"></view>
+
+	<cmpt-detail mode="mode2" topBtnShow="{{topBtnShow}}" oid="{{id}}" cate="场馆" title="{{unit.UNIT_TITLE}}"   cover="{{unit.UNIT_OBJ.cover[0]}}" qr="{{unit.UNIT_QR}}" desc="查看场馆详情" bg="#EE7532">
+		<view class="unit-orpt">
+			<view bindtap="bindMapTap" data-address="{{unit.UNIT_ADDRESS_DETAIL}}" data-location="{{unit.UNIT_ADDRESS}}" class="bg-project " style="width:400rpx"><text class="icon-location"></text>导航</view>
+		</view>
+	</cmpt-detail>
+
+</block>

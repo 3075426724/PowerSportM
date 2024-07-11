@@ -1,0 +1,174 @@
+@import "../../../style/skin.wxss";
+
+.main {
+	width: 100%;
+	padding: 0;
+	position: relative;
+}
+
+.pic {
+	width: 100%;
+	position: relative;
+}
+
+.pic image {
+	width: 100%;
+}
+
+.pic .intro {
+	position: absolute;
+	bottom: 90rpx;
+	right: 20rpx;
+	z-index: 99999;
+	color: #fff;
+	background-color: rgba(217, 102, 25, 0.9);
+	padding: 10rpx 30rpx;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+}
+
+.main .info {
+	width: 100%;
+	margin-top: -60rpx;
+	position: relative;
+	border-top-left-radius: 40rpx;
+	border-top-right-radius: 40rpx;
+	z-index: 9;
+	overflow: hidden;
+}
+
+
+.main .info .header {
+	width: 100%;
+	display: flex;
+	background-color: #fff;
+	padding: 30rpx 30rpx 0;
+	justify-content: space-between;
+}
+
+.main .info .header .line1 {
+	flex: 1;
+	font-weight: bold;
+	font-size: 36rpx;
+	color: #000;
+	display: flex;
+	padding-bottom: 40rpx;
+	border-bottom: 2rpx dashed #ccc;
+}
+
+
+.main .info .content {
+	margin-bottom: 20rpx;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 20rpx 30rpx;
+}
+
+.main .info .content .item {
+	width: 100%;
+	display: flex;
+	border-bottom: 1rpx solid #eee;
+	padding: 30rpx 0;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.main .info .content .item:last-child {
+	border-bottom: 0;
+}
+
+.main .info .content .item .title {
+	width: 150rpx;
+	font-size: 28rpx;
+	color: #999;
+	margin-right: 30rpx;
+}
+
+.main .info .content .item .desc {
+	flex: 1;
+	font-size: 28rpx;
+	color: #333;
+}
+
+.main .info .content .icon-right {
+	font-size: 32rpx;
+	color: #ccc;
+	text-align: right;
+	margin-top: 20rpx;
+}
+
+.appt {
+	margin-bottom: 20rpx;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 20rpx 30rpx;
+}
+
+.appt .form-line {
+	width: 100%;
+	padding: 20rpx 40rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30rpx;
+}
+
+.appt .form-line .txt {
+	font-size: 30rpx;
+	margin: 0 10rpx;
+	font-weight: bold;
+}
+
+.appt .form-line .left,
+.appt .form-line .right {
+	width: 200rpx;
+	height: 2rpx;
+	background-color: #ccc;
+}
+
+.appt .cate-list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.appt .cate-list .item {
+	width: 25%;
+	margin-bottom: 40rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.appt .cate-list .item image {
+	width: 70rpx;
+	height: 70rpx;
+}
+
+.appt .cate-list .item text {
+	font-size: 26rpx;
+	color: #666;
+	margin-top: 10rpx;
+}
+
+
+.unit-orpt {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.unit-orpt>view {
+	color: #fff;
+	background-image: linear-gradient(45deg, var(--projectColor), var(--projectColorLight));
+	padding: 15rpx 35rpx;
+	border-radius: 40rpx;
+	text-align: center;
+	font-size: 28rpx;
+}

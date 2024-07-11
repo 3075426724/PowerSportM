@@ -1,0 +1,102 @@
+@import "../../../style/skin.wxss";
+
+.list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 30rpx;
+}
+
+.list .item {
+	position: relative;
+	width: 100%;
+	display: flex;
+	background-color: #fff;
+	padding: 0 20rpx 0 0;
+	overflow: hidden;
+	border-radius: 20rpx;
+	margin-bottom: 30rpx;
+	min-height: 170rpx;
+}
+
+.list .item .left {
+	width: 220rpx;
+	height: 170rpx;
+	border-top-left-radius: 20rpx !important;
+	border-bottom-left-radius: 20rpx !important;
+	margin-right: 20rpx;
+	border-radius: 16rpx;
+	border-top-right-radius: 80rpx;
+}
+
+.list .item .left image {
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+}
+
+.list .item .right {
+	flex: 1;
+	display: flex;
+	padding: 8rpx 0 4rpx;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.list .item .right .line {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.list .item .right .line .name {
+	width: 100%;
+	font-size: 30rpx;
+	font-weight: bold;
+	border-bottom: 1rpx dashed #ddd;
+	padding: 0;
+	color: #000;
+	height: 56rpx;
+	line-height: 56rpx;
+}
+
+.list .item .right .line .dex {
+	font-size: 24rpx;
+	color: #999;
+	margin-top: 8rpx;
+}
+
+.list .item .right .oprt {
+	width: 100%;
+	padding: 0rpx 0;
+	height: 50rpx;
+	line-height: 50rpx;
+	text-align: right;
+	margin-bottom: 6rpx;
+}
+
+.list .item .right .oprt>text {
+	color: #EE7532; 
+	font-size: 22rpx;
+	padding: 6rpx 16rpx;
+	border-radius: 6rpx;
+	background-image: linear-gradient(145deg, #f5dbce, #fff);
+	border-top-left-radius: 20rpx;
+	border-bottom-right-radius: 20rpx;
+}
+
+.list .item .star {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: var(--projectColor);
+	color: #fff;
+	padding: 5rpx 15rpx; 
+	border-top-right-radius: 20rpx;
+	border-bottom-left-radius: 20rpx;
+	opacity: .9;
+	font-size: 24rpx;
+	z-index: 99999;
+}
